@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 36px;
+    background-color: #e60012;
+    color: white;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    width: 50px;
+}
+
+.nav-center {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex: 1;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding-bottom: 4px;
+    transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+    opacity: 0.75;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid white;
+}
+
+.logo {
+    height: 55px;
+}
+
+.nav-links a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    justify-content: center;
+    gap: 32px;
+}
+
+.hero img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+
+.container {
+    padding: 40px;
+}
+
+.white {
+    background-color: white;
+}
+
+.red {
+    background-color: #e60012;
+    color: white;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.time-info {
+    max-width: 500px;
+}
+
+.time-info h3 {
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+.stats-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.stats-numbers {
+    display: flex;
+    gap: 30px;
+}
+
+.stats-numbers div {
+    text-align: center;
+}
+
+.stats-numbers strong {
+    font-size: 32px;
+    display: block;
+}
+
+.stats-numbers span {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.chart-box {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    width: 500px;
+    height: 350px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border: 4px solid #fff;
+}
+
+.chart-box canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.cards-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 40px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.cards-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.card {
+    width: 250px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.card-content p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.card img {
+    width: 250px;
+    height: 334px;
+    object-fit: cover;
+    display: block;
+}
+
+.card h4 {
+    margin: 10px 0;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    background-image: url("../image/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 16px;
+}
+
+.about-image {
+    flex: 0 0 250px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -74px;
+}
+
+.about-image img {
+    width: 500px;
+}
+
+.about-text h2 {
+    margin-bottom: 12px;
+}
+
+.about-text p {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
