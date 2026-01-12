@@ -7,6 +7,13 @@
     <link rel="icon" href="image/icon-n.png" type="image/png">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+    <div class="music-player" id="musicPlayer">
+        <img src="image/vinilo.png" alt="Vinilo musical">
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="music/Qumu - Freezy Flake Galaxy (From _Super Mario Galaxy 2_).mp3" type="audio/mp3">
+    </audio>
 <body>
 
     <header class="navbar">
@@ -172,6 +179,8 @@
     <script>
     const ctx = document.getElementById('myChart');
     const reveals = document.querySelectorAll('.reveal');
+    const musicPlayer = document.getElementById('musicPlayer');
+    const bgMusic = document.getElementById('bgMusic');
 
     new Chart(ctx, {
         type: 'bar',
@@ -245,6 +254,16 @@
                     }
                 }
             }
+        }
+    });
+
+    musicPlayer.addEventListener('click', () => {
+        if (bgMusic.paused) {
+            bgMusic.play();
+            musicPlayer.classList.add('playing');
+        } else {
+            bgMusic.pause();
+            musicPlayer.classList.remove('playing');
         }
     });
 
