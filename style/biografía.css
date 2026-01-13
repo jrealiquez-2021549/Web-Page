@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Shadows+Into+Light&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+}
+
+/* NAVBAR (igual que page-one.css) */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 36px;
+    background-color: #5d2417;
+    color: white;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    width: 50px;
+}
+
+.nav-center {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex: 1;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding-bottom: 4px;
+    transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+    opacity: 0.75;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid white;
+}
+
+.logo {
+    height: 55px;
+}
+
+/* FOOTER (igual que page-one.css) */
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* REPRODUCTOR DE MÚSICA (igual que page-one.css) */
+.music-player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+}
+
+.music-player:hover {
+    transform: scale(1.1);
+}
+
+.music-player img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.music-player.playing img {
+    animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* SECCIÓN DE BIOGRAFÍA */
+.biografia-container {
+    min-height: calc(100vh - 140px);
+    background-image: url("../image/background-2-0.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 60px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 60px;
+    max-width: 1500px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* HOJA DE EXPECTATIVAS (izquierda - usando imagen real) */
+.hoja-expectativas {
+    width: 612px;
+    min-height: 710px;
+    padding: 60px 50px 50px 80px;
+    box-shadow: none;
+    border-radius: 8px;
+    position: relative;
+    background-image: url("../image/hoja-linea.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.hoja-content {
+    position: relative;
+    z-index: 1;
+    font-family: "Caveat", cursive;
+}
+
+.hoja-content h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #5d2417;
+    text-align: center;
+    font-weight: 700;
+    font-family: "Caveat", cursive;
+}
+
+.hoja-content h3 {
+    font-size: 28px;
+    color: #5d2417;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-family: "Caveat", cursive;
+}
+
+.texto-expectativas p {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+    text-align: justify;
+    font-family: "Caveat", cursive;
+}
+
+.texto-expectativas strong {
+    color: #5d2417;
+    font-weight: 700;
+}
+
+/* BLOCS DE NOTAS (derecha - usando imagen real) */
+.blocs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.blocs-row {
+    display: flex;
+    gap: 30px;
+}
+
+.bloc-nota {
+    width: 300px;
+    min-height: 330px;
+    padding-top: 105px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    box-shadow: none;
+    border-radius: 4px;
+    position: relative;
+    background-image: url("../image/bloc-nota.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.bloc-nota::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+}
+
+.bloc-content {
+    font-family: "Shadows Into Light", cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bloc-content h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #e60012;
+    text-align: center;
+    font-weight: 700;
+    font-family: "Shadows Into Light", cursive;
+}
+
+.bloc-content ul {
+    list-style: none;
+    padding: 0;
+    text-align: left; /* ← Mantiene el texto alineado a la izquierda */
+    display: inline-block; /* ← Hace que el ul solo ocupe el ancho necesario */
+}
+
+.bloc-content ul li {
+    font-size: 17px;
+    line-height: 28px;
+    color: #1a1a1a;
+    padding-left: 22px;
+    position: relative;
+    font-family: "Shadows Into Light", cursive;
+    text-align: left; /* ← Asegura que cada línea esté a la izquierda */
+}
+
+.bloc-content ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #e60012;
+    font-weight: bold;
+}
+
+.blocs-row:first-child .bloc-nota:first-child {
+    transform: rotate(-3deg);
+}
+
+.blocs-row:first-child .bloc-nota:last-child {
+    transform: rotate(2.5deg);
+}
+
+.blocs-row:last-child .bloc-nota:first-child {
+    transform: rotate(3deg);
+}
+
+.blocs-row:last-child .bloc-nota:last-child {
+    transform: rotate(-2deg);
+}
+
+/* ANIMACIONES REVEAL */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1400px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .hoja-expectativas {
+        width: 90%;
+        max-width: 550px;
+    }
+
+    .blocs-container {
+        width: 100%;
+        max-width: 650px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .biografia-container {
+        padding: 40px 20px;
+    }
+
+    .hoja-expectativas {
+        width: 100%;
+        padding: 50px 30px 30px 60px;
+        min-height: auto;
+    }
+
+    .hoja-content h2 {
+        font-size: 30px;
+    }
+
+    .texto-expectativas p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .blocs-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bloc-nota {
+        width: 100%;
+        max-width: 320px;
+    }
+}
