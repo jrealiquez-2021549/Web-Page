@@ -282,6 +282,25 @@
     transform: translateY(0);
 }
 
+.hoja-expectativas::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: -40px;
+    width: 120px;
+    height: 120px;
+    background-image: url("../image/cupcake.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+    transition: transform 0.3s ease;
+}
+
+.hoja-expectativas:hover::after {
+    transform: translateY(-15px);
+}
+
 /* RESPONSIVE */
 @media (max-width: 1400px) {
     .content-wrapper {
