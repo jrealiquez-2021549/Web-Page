@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Autobiografía - Expectativas 2026</title>
+    <link rel="stylesheet" href="style/biografía.css">
+    <link rel="icon" href="image/icon-b.png" type="image/png">
+</head>
+<body>
+    <div class="music-player" id="musicPlayer">
+        <img src="image/vinilo.png" alt="Vinilo musical">
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="music/Varien - Stories of Friendship and Literature.mp3" type="audio/mp3">
+    </audio>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <img src="image/logo-biografía.png" alt="Nintendo Logo" class="logo">
+        </div>
+
+        <nav class="nav-center">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="#" class="nav-link active">Biografía</a>
+            <a href="#" class="nav-link">Kinal</a>
+        </nav>
+
+        <div class="nav-right"></div>
+    </header>
+
+    <section class="biografia-container">
+        <div class="content-wrapper">
+            <!-- Hoja de expectativas (izquierda) -->
+            <div class="hoja-expectativas reveal">
+                <div class="hoja-content">
+                    <h2>Expectativas para este año</h2>
+                    <div class="texto-expectativas">
+                        <p>
+                            Para este 2026, tengo grandes expectativas en mi camino educativo. 
+                            Quiero profundizar mis conocimientos en programación y desarrollo de software, 
+                            especialmente en áreas como desarrollo web y creación de videojuegos.
+                        </p>
+                        <p>
+                            Me propongo mantener un promedio académico sobresaliente, participar 
+                            activamente en proyectos colaborativos y aprovechar cada oportunidad 
+                            de aprendizaje que se presente en Kinal.
+                        </p>
+                        <p>
+                            También espero poder equilibrar mis estudios con mi pasión por los 
+                            videojuegos, utilizando esta última como inspiración para mis proyectos 
+                            de programación.
+                        </p>
+                        
+                        <h3 style="margin-top: 30px;">Tiempo dedicado a estudios</h3>
+                        <p>
+                            Planeo dedicar un mínimo de 25 horas semanales a mis 
+                            estudios, distribuidas entre clases, tareas, proyectos personales y 
+                            práctica de programación.
+                        </p>
+                        <p>
+                            Mi rutina incluirá 2-3 horas diarias de estudio después de clases, 
+                            y sesiones intensivas de 4-5 horas los fines de semana para proyectos 
+                            más complejos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blocs de notas (derecha - 2x2) -->
+            <div class="blocs-container">
+                <div class="blocs-row">
+                    <div class="bloc-nota reveal">
+                        <div class="bloc-content">
+                            <h3>Habilidades Técnicas</h3>
+                            <ul>
+                                <li>JavaScript avanzado</li>
+                                <li>React y frameworks modernos</li>
+                                <li>Desarrollo de APIs</li>
+                                <li>Bases de datos SQL/NoSQL</li>
+                                <li>Git y control de versiones</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bloc-nota reveal">
+                        <div class="bloc-content">
+                            <h3>Habilidades Creativas</h3>
+                            <ul>
+                                <li>Diseño de videojuegos</li>
+                                <li>UI/UX Design</li>
+                                <li>Programación de gráficos</li>
+                                <li>Game engines (Unity/Godot)</li>
+                                <li>Pixel art y animación</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blocs-row">
+                    <div class="bloc-nota reveal">
+                        <div class="bloc-content">
+                            <h3>Habilidades Blandas</h3>
+                            <ul>
+                                <li>Trabajo en equipo</li>
+                                <li>Gestión del tiempo</li>
+                                <li>Pensamiento crítico</li>
+                                <li>Comunicación efectiva</li>
+                                <li>Resolución de problemas</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bloc-nota reveal">
+                        <div class="bloc-content">
+                            <h3>Objetivos Personales</h3>
+                            <ul>
+                                <li>Crear mi primer videojuego</li>
+                                <li>Contribuir a proyectos open source</li>
+                                <li>Aprender inglés técnico</li>
+                                <li>Participar en hackathons</li>
+                                <li>Construir mi portafolio web</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 Proyecto Laboratorio 1</p>
+    </footer>
+
+    <script>
+        const musicPlayer = document.getElementById('musicPlayer');
+        const bgMusic = document.getElementById('bgMusic');
+        const reveals = document.querySelectorAll('.reveal');
+
+        musicPlayer.addEventListener('click', () => {
+            if (bgMusic.paused) {
+                bgMusic.play();
+                musicPlayer.classList.add('playing');
+            } else {
+                bgMusic.pause();
+                musicPlayer.classList.remove('playing');
+            }
+        });
+
+        function revealOnScroll() {
+            const windowHeight = window.innerHeight;
+            const revealPoint = 120;
+
+            reveals.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                const elementBottom = el.getBoundingClientRect().bottom;
+
+                if (elementTop < windowHeight - revealPoint && elementBottom > 0) {
+                    el.classList.add('active');
+                } else {
+                    el.classList.remove('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+    </script>
+</body>
+</html>
