@@ -99,15 +99,90 @@
     }
 }
 
-/* SECCIÓN DE BIOGRAFÍA */
-.biografia-container {
-    min-height: calc(100vh - 140px);
+.biografia-intro {
     background-image: url("../image/background-2-0.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding: 60px 40px;
+    padding: 30px 40px 40px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-wrapper {
+    display: flex;
+    gap: 40px;
+    max-width: 1400px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.hoja-biografia {
+    width: 600px;
+    height: 400px;
+    padding: 60px 50px 50px 80px;
+    position: relative;
+    background-image: url("../image/hoja-linea-rota.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: none;
+}
+
+.biografia-texto {
+    font-family: "Caveat", cursive;
+}
+
+.biografia-texto h2 {
+    font-size: 42px;
+    margin-bottom: 25px;
+    color: #e60012;
+    text-align: center;
+    font-weight: 700;
+    font-family: "Caveat", cursive;
+}
+
+.biografia-texto p {
+    font-size: 20px;
+    line-height: 30px;
+    color: #1a1a1a;
+    text-align: justify;
+    font-family: "Caveat", cursive;
+}
+
+.foto-personal {
+    width: 330px;
+    height: 400px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.foto-personal.reveal.active {
+    transform: translateY(0) rotate(2deg); /* Combina ambos transforms */
+}
+
+.foto-personal:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+.foto-personal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* SECCIÓN DE BIOGRAFÍA */
+.biografia-container {
+    background-image: url("../image/background-2-0.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 30px 40px 40px 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -144,7 +219,7 @@
 .hoja-content h2 {
     font-size: 36px;
     margin-bottom: 30px;
-    color: #5d2417;
+    color: #e60012;
     text-align: center;
     font-weight: 700;
     font-family: "Caveat", cursive;
@@ -152,7 +227,7 @@
 
 .hoja-content h3 {
     font-size: 28px;
-    color: #5d2417;
+    color: #e60012;
     margin-bottom: 15px;
     font-weight: 600;
     font-family: "Caveat", cursive;
@@ -168,7 +243,7 @@
 }
 
 .texto-expectativas strong {
-    color: #5d2417;
+    color: #e60012;
     font-weight: 700;
 }
 
