@@ -426,3 +426,102 @@
         max-width: 320px;
     }
 }
+
+/* RESPONSIVE */
+@media (max-width: 1400px) {
+    .intro-wrapper {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .hoja-biografia {
+        width: 90%;
+        max-width: 600px;
+        height: auto;
+        min-height: 400px;
+    }
+
+    .foto-personal {
+        width: 90%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .foto-personal img {
+        width: 100%;
+        height: auto;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .hoja-expectativas {
+        width: 90%;
+        max-width: 550px;
+    }
+
+    .blocs-container {
+        width: 100%;
+        max-width: 650px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .biografia-intro {
+        padding: 60px 20px;
+    }
+
+    .hoja-biografia {
+        width: 100%;
+        padding: 40px 30px 30px 60px;
+    }
+
+    .biografia-texto h2 {
+        font-size: 36px;
+    }
+
+    .biografia-texto p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .foto-personal {
+        width: 100%;
+        max-width: 350px;
+        transform: rotate(0deg) !important; /* Sin rotación en móviles */
+    }
+
+    .biografia-container {
+        padding: 40px 20px;
+    }
+
+    .hoja-expectativas {
+        width: 100%;
+        padding: 50px 30px 30px 60px;
+        min-height: auto;
+    }
+
+    .hoja-content h2 {
+        font-size: 30px;
+    }
+
+    .texto-expectativas p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .blocs-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bloc-nota {
+        width: 100%;
+        max-width: 320px;
+        transform: rotate(0deg) !important; /* Sin rotación en móviles */
+    }
+}
