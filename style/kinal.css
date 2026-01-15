@@ -667,49 +667,75 @@ header {
 
 /* --- Blog --- */
 .blog-section {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 80px 20px;
+    background: #16233F;
+    text-align: center;
 }
 
 .blog-title {
-    text-align: center;
-    color: var(--color-blue);
-    font-size: 32px;
-    margin-bottom: 40px;
+    color: white;
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .blog-card {
-    border: 1px solid #eee;
-    border-radius: 8px;
+    position: relative;
     overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    height: 350px;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
 }
 
 .blog-img {
-    height: 200px;
-    background-color: #ddd;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
+    position: relative;
 }
 
-.blog-content {
-    padding: 20px;
+.blog-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 40%, transparent 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+    transition: background 0.3s ease;
 }
 
-.blog-content h4 {
-    color: var(--color-blue);
-    margin-bottom: 10px;
+.blog-card:hover .blog-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 40%, transparent 100%);
 }
 
-.blog-content p {
-    font-size: 14px;
-    color: #666;
+.blog-card-title {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: left;
+    margin: 40px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 /* --- Footer --- */
