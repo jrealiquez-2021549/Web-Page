@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundación Kinal - Replicación</title>
+    <link rel="stylesheet" href="style/kinal.css">
+    <link rel="icon" href="image/icon-k.png" type="image/png">
+</head>
+
+<body>
+
+    <header>
+        <div class="top-bar">
+            <div class="logo-container">
+                <a href="index.html">
+                    <!-- Reemplaza 'logo-kinal.png' con la ruta de tu logo -->
+                    <img src="image/logo-kinal.png" alt="Fundación Kinal" class="logo-kinal">
+                </a>
+            </div>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#">APÓYANOS</a></li>
+                    <li class="nav-item">
+                        QUIÉNES SOMOS
+                        <ul class="dropdown">
+                            <li><a href="#">FUNDACIÓN</a></li>
+                            <li><a href="#">EXPO KINAL 2025</a></li>
+                            <li><a href="#">GALERÍA DE FOTOS</a></li>
+                            <li><a href="#">PATRONATO</a></li>
+                            <li><a href="#">SPONSORS</a></li>
+                            <li><a href="#">PRESSKIT</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        EDUCACIÓN
+                        <ul class="dropdown">
+                            <li><a href="#">PERITOS TÉCNICOS</a></li>
+                            <li><a href="#">CICLO BÁSICO</a></li>
+                            <li><a href="#">CARRERAS DE TECNOLOGÍA</a></li>
+                            <li><a href="#">ESCUELA TÉCNICA</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        ANTIGUOS ALUMNOS
+                        <ul class="dropdown">
+                            <li><a href="#">FORMA PARTE</a></li>
+                            <li><a href="#">ACTIVIDADES DEPORTIVAS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#">BOLSA DE EMPLEOS</a></li>
+                    <li class="nav-item"><a href="#">BLOG</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-right">
+                <!-- Botón BI con imagen clickeable -->
+                <a href="https://link.ebi.com.gt/" target="_blank" class="btn-bi">
+                    <!-- Reemplaza 'logo-bi.png' con la ruta de tu logo de BI -->
+                    <img src="image/logo-BI.png" alt="Banco Industrial" class="bi-logo">
+                </a>
+                <div class="language-selector">ES</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección del carrusel actualizada -->
+    <section class="hero-slider" id="homeSlider">
+        <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
+
+        <div class="slide bg-slide1 active">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <!-- Reemplaza con tu imagen de texto -->
+                <img src="image/adulto-text.png" alt="Tu camino al éxito está en Kinal" class="slide-text-img">
+            </div>
+        </div>
+        <div class="slide bg-slide2">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <!-- Reemplaza con tu imagen de texto -->
+                <img src="image/jovenes-text.png" alt="Formación técnica de calidad" class="slide-text-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="intro-section">
+        <img src="image/sello.png" alt="El trabajo bien hecho" class="intro-seal">
+        <h2>TU CAMINO AL ÉXITO ESTÁ EN KINAL</h2>
+        <p>Kinal es un Centro Educativo privado, no lucrativo, dirigido a la formación técnica profesional 
+            de jóvenes y adultos, de beneficio colectivo y asistencia social en favor de los sectores más 
+            necesitados de la comunidad. Nuestro valor fundamental es enseñar a realizar el trabajo bien 
+            hecho, que sea la base de la superación de alumnos y el medio para servir a los demás.</p>
+    </section>
+
+    <!-- Sección de carreras actualizada -->
+    <section class="careers-section">
+        <div class="careers-grid">
+            <div class="career-card">
+                <div class="career-image-wrapper">
+                    <img src="image/ruta01.png" alt="Ciclo Básico" class="career-image">
+                </div>
+                <div class="career-info">
+                    <p class="career-description">
+                        Kinal ofrece su programa de Educación General Básica para todos aquellos 
+                        jóvenes que buscan una orientación técnica y excelencia académica.
+                    </p>
+                    <a href="#" class="btn-conoce-mas">CONOCE MÁS</a>
+                </div>
+            </div>
+
+            <div class="career-card">
+                <div class="career-image-wrapper">
+                    <img src="image/ruta02.png" alt="Diversificado" class="career-image">
+                </div>
+                <div class="career-info">
+                    <p class="career-description">
+                        Durante 3 años se prepara al joven de forma técnica y académica, el egresado 
+                        estará listo para trabajar en el ramo técnico de la especialidad que eligió 
+                        estudiar: el título obtenido le permitirá ingresar a la universidad.
+                    </p>
+                    <a href="#" class="btn-conoce-mas">CONOCE MÁS</a>
+                </div>
+            </div>
+
+            <div class="career-card">
+                <div class="career-image-wrapper">
+                    <img src="image/ruta03.png" alt="Escuela Técnica" class="career-image">
+                </div>
+                <div class="career-info">
+                    <p class="career-description">
+                        Contamos con más de 30 especialidades técnicas y tecnológicas que pueden 
+                        favorecer tu crecimiento y/o tu inserción laboral.
+                    </p>
+                    <a href="#" class="btn-conoce-mas">CONOCE MÁS</a>
+                </div>
+            </div>
+
+            <div class="career-card">
+                <div class="career-image-wrapper">
+                    <img src="image/ruta04.png" alt="Escuela Técnica" class="career-image">
+                </div>
+                <div class="career-info">
+                    <p class="career-description">
+                        Dirigido al fortalecimiento de mandos medios y especialmente aquellos que 
+                        han cursado una carrera técnica y desean continuar con estudios a nivel 
+                        universitario. Estos estudios son avalados por la Universidad del Istmo.
+                    </p>
+                    <a href="#" class="btn-conoce-mas">CONOCE MÁS</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <h2>JÓVENES BENEFICIADOS (A 2024)</h2>
+
+        <div class="stats-grid">
+            <div class="stat-card yellow">
+                <span class="stat-number">25k</span>
+                <span class="stat-line"></span>
+                <p class="stat-label">ESCUELA TÉCNICA</p>
+            </div>
+
+            <div class="stat-card wine">
+                <span class="stat-number">1500</span>
+                <span class="stat-line"></span>
+                <p class="stat-label">CICLO BÁSICO</p>
+            </div>
+
+            <div class="stat-card blue">
+                <span class="stat-number">6k</span>
+                <span class="stat-line"></span>
+                <p class="stat-label">DIVERSIFICADO</p>
+            </div>
+
+            <div class="stat-card orange">
+                <span class="stat-number">+32k</span>
+                <span class="stat-line"></span>
+                <p class="stat-label">TOTAL</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-section" id="videoSection">
+        <video class="video-bg" id="kinalVideo" poster="image/video-poster.jpg">
+            <source src="media/video-kinal.mp4" type="video/mp4">
+        </video>
+
+        <div class="video-overlay"></div>
+
+        <div class="video-controls">
+            <button class="control-btn" id="playPauseBtn">▶</button>
+
+            <input type="range" id="volumeControl" min="0" max="1" step="0.05" value="1">
+        </div>
+    </section>
+
+    <section class="partners-section">
+        <h2>NUESTROS PARTNERS</h2>
+
+        <div class="partners-carousel">
+            <button class="partner-arrow left" id="prevPartner">&#10094;</button>
+
+            <div class="partners-viewport">
+                <div class="partners-track" id="partnersTrack">
+                    <img src="image/p-01.png">
+                    <img src="image/p-02.png">
+                    <img src="image/p-03.png">
+                    <img src="image/p-04.png">
+                    <img src="image/p-05.png">
+                    <img src="image/p-06.png">
+                    <img src="image/p-07.png">
+                    <img src="image/p-08.png">
+                    <img src="image/p-09.png">
+                </div>
+            </div>
+
+            <button class="partner-arrow right" id="nextPartner">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="alumni-section">
+    <div class="alumni-block">
+        <div class="alumni-image">
+        <img src="image/image-01.png" alt="">
+        </div>
+
+        <div class="alumni-card">
+        <h2>¿ERES ANTIGUO ALUMNO?<br>¡LAS EMPRESAS TE ESTÁN BUSCANDO!</h2>
+        <p>
+            Durante 2023 recibimos más de 600 solicitudes de trabajo
+            para nuestros antiguos alumnos.
+        </p>
+        <a href="#">💛 TRABAJOS</a>
+        </div>
+    </div>
+
+    <div class="alumni-block reverse">
+        <div class="alumni-image">
+        <img src="image/image-02.png" alt="">
+        </div>
+
+        <div class="alumni-card">
+        <h2>¡NECESITAMOS MÁS<br>JÓVENES DE ESTE LADO!</h2>
+        <p>Cada donación que haces ayuda a la educación de un joven 
+            guatemalteco de escasos recursos a tener una educación de calidad.</p>
+        <a href="#">💛 APÓYANOS</a>
+        </div>
+    </div>
+
+    </section>
+
+    <section class="blog-section">
+        <h2 class="blog-title">NUESTRO BLOG</h2>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <div class="blog-img"
+                    style="background-image: url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=500')">
+                </div>
+                <div class="blog-content">
+                    <h4>Mensaje Semanal Patronato</h4>
+                    <p>Reflexiones sobre la perseverancia y el trabajo bien hecho...</p>
+                    <a href="#" style="color:var(--color-orange); font-size:12px; font-weight:bold;">LEER MÁS</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-img"
+                    style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500')">
+                </div>
+                <div class="blog-content">
+                    <h4>Gratitud y Valores</h4>
+                    <p>La importancia de la gratitud en el entorno educativo y profesional...</p>
+                    <a href="#" style="color:var(--color-orange); font-size:12px; font-weight:bold;">LEER MÁS</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-img"
+                    style="background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=500')">
+                </div>
+                <div class="blog-content">
+                    <h4>Éxito de Exalumnos</h4>
+                    <p>Historias de éxito de nuestros graduandos en el mundo laboral...</p>
+                    <a href="#" style="color:var(--color-orange); font-size:12px; font-weight:bold;">LEER MÁS</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>CONTÁCTANOS</h4>
+                <p>6 avenida 13-54 zona 7,<br>Colonia Landívar,<br>Ciudad de Guatemala.</p>
+                <p>PBX: 2216-0000</p>
+            </div>
+            <div class="footer-col">
+                <h4>CORREOS</h4>
+                <a href="mailto:info@kinal.org.gt">info@kinal.org.gt</a>
+                <a href="mailto:admisiones@kinal.org.gt">admisiones@kinal.org.gt</a>
+                <a href="mailto:empleos@kinal.org.gt">empleos@kinal.org.gt</a>
+            </div>
+            <div class="footer-col">
+                <h4>BOLSA DE EMPLEO</h4>
+                <p>¿Buscas talento Kinal?</p>
+                <a href="#" style="text-decoration: underline;">Contáctanos aquí</a>
+            </div>
+            <div class="footer-col">
+                <h4>SÍGUENOS</h4>
+                <div style="display:flex; gap:15px; font-size:20px;">
+                    <a href="#">F</a> <a href="#">I</a> <a href="#">Y</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            FUNDACIÓN KINAL | 2025 TODOS LOS DERECHOS RESERVADOS
+        </div>
+    </footer>
+
+    <script>
+        const video = document.getElementById("kinalVideo");
+        const playPauseBtn = document.getElementById("playPauseBtn");
+        const volumeControl = document.getElementById("volumeControl");
+        const videoSection = document.getElementById("videoSection");
+
+        const track = document.getElementById("partnersTrack");
+        const next = document.getElementById("nextPartner");
+        const prev = document.getElementById("prevPartner");
+
+        const visible = 5;                       // logos visibles
+        const total = track.children.length;
+        let index = 0;
+
+        let controlsTimeout;
+        let slideIndex = 0;
+        showSlides();
+
+        function moveSlide(n) {
+            slideIndex += n;
+            const slides = document.getElementsByClassName("slide");
+            if (slideIndex >= slides.length) slideIndex = 0;
+            if (slideIndex < 0) slideIndex = slides.length - 1;
+            updateSlides();
+        }
+
+        function showSlides() {
+            slideIndex++;
+            const slides = document.getElementsByClassName("slide");
+            if (slideIndex >= slides.length) slideIndex = 0;
+            updateSlides();
+            setTimeout(showSlides, 5000);
+        }
+
+        function updateSlides() {
+            const slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            slides[slideIndex].classList.add("active");
+        }
+
+        function showControls() {
+            videoSection.classList.add("show-controls");
+
+            clearTimeout(controlsTimeout);
+            controlsTimeout = setTimeout(() => {
+                if (!video.paused) {
+                    videoSection.classList.remove("show-controls");
+                }
+            }, 2500);
+        }
+
+        videoSection.addEventListener("mousemove", showControls);
+        videoSection.addEventListener("mouseenter", showControls);
+
+        playPauseBtn.addEventListener("click", () => {
+            if (video.paused) {
+                video.play();
+                playPauseBtn.textContent = "⏸";
+                videoSection.classList.add("playing");
+                showControls();
+            } else {
+                video.pause();
+                playPauseBtn.textContent = "▶";
+                videoSection.classList.remove("playing");
+                videoSection.classList.add("show-controls");
+            }
+        });
+
+        volumeControl.addEventListener("input", () => {
+            video.volume = volumeControl.value;
+        });
+
+        function updateCarousel() {
+            const logoWidth = track.children[0].offsetWidth + 60;
+            track.style.transform = `translateX(-${index * logoWidth}px)`;
+        }
+
+        next.addEventListener("click", () => {
+            if (index < total - visible) {
+                index++;
+                updateCarousel();
+            }
+        });
+
+        prev.addEventListener("click", () => {
+            if (index > 0) {
+                index--;
+                updateCarousel();
+            }
+        });
+
+        window.addEventListener("resize", updateCarousel);
+    </script>
+</body>
+
+</html>
