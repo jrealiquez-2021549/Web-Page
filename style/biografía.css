@@ -16,6 +16,9 @@
     padding: 14px 36px;
     background-color: #5d2417;
     color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .nav-left {
