@@ -31,7 +31,18 @@
     </header>
 
     <section class="hero">
-        <img src="image/juego-principal.png" alt="Videojuego principal">
+        <div class="carousel">
+            <div class="carousel-track">
+                <img src="image/juego-principal.png" alt="Juego 1">
+                <img src="image/juego1-c.jpg" alt="Juego 2">
+                <img src="image/juego2-c.jpg" alt="Juego 3">
+                <img src="image/juego3-c.jpg" alt="Juego 4">
+                <img src="image/juego4-c.jpg" alt="Juego 5">
+            </div>
+
+            <button class="carousel-btn prev">‹</button>
+            <button class="carousel-btn next">›</button>
+        </div>
     </section>
 
     <section class="container white about-section">
@@ -182,6 +193,14 @@
     const musicPlayer = document.getElementById('musicPlayer');
     const bgMusic = document.getElementById('bgMusic');
 
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+
+    const firstClone = slides[0].cloneNode(true);
+    const lastClone = slides[slides.length - 1].cloneNode(true);
+
     new Chart(ctx, {
         type: 'bar',
         data: {
@@ -285,6 +304,77 @@
             }
         });
     }
+
+    track.appendChild(firstClone);
+    track.insertBefore(lastClone, slides[0]);
+
+    let index = 1;
+    const slideCount = track.children.length;
+    let autoPlayInterval;
+
+    /* Posición inicial segura */
+    function setPosition(noTransition = false) {
+        if (noTransition) track.style.transition = 'none';
+        else track.style.transition = 'transform 0.8s ease-in-out';
+
+        track.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    /* Avanzar */
+    function nextSlide() {
+        index++;
+        setPosition();
+    }
+
+    /* Retroceder */
+    function prevSlide() {
+        index--;
+        setPosition();
+    }
+
+    /* Corrección invisible */
+    track.addEventListener('transitionend', () => {
+        const slides = track.children;
+
+        if (slides[index] === firstClone) {
+            index = 1;
+            setPosition(true);
+        }
+
+        if (slides[index] === lastClone) {
+            index = slideCount - 2;
+            setPosition(true);
+        }
+    });
+
+    /* Botones */
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    /* Auto-play seguro */
+    function startAutoplay() {
+        stopAutoplay();
+        autoPlayInterval = setInterval(nextSlide, 5000);
+    }
+
+    function stopAutoplay() {
+        if (autoPlayInterval) clearInterval(autoPlayInterval);
+    }
+
+    /* Manejo de pestaña inactiva */
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            stopAutoplay();
+        } else {
+            index = 1;
+            setPosition(true);
+            startAutoplay();
+        }
+    });
+
+    /* Init */
+    setPosition(true);
+    startAutoplay();
 
     window.addEventListener('scroll', revealOnScroll);
     revealOnScroll();
