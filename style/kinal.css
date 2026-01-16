@@ -1,4 +1,3 @@
-/* --- Configuración Base --- */
 :root {
     --color-blue: #23376D;
     --color-orange: #EB7207;
@@ -30,7 +29,6 @@ img {
     display: block;
 }
 
-/* --- Header y Navegación --- */
 header {
     background: var(--color-white);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
@@ -64,7 +62,6 @@ header {
     width: auto;
 }
 
-/* Menú */
 .nav-menu {
     display: flex;
     gap: 35px;
@@ -80,14 +77,13 @@ header {
     cursor: pointer;
     letter-spacing: 0.3px;
     transition: color 0.3s ease;
-    padding-bottom: 0; /* Removido el padding-bottom */
+    padding-bottom: 0;
 }
 
 .nav-item:hover {
     color: var(--color-orange);
 }
 
-/* Dropdown */
 .dropdown {
     display: none;
     position: absolute;
@@ -135,14 +131,12 @@ header {
     color: var(--color-orange);
 }
 
-/* Área derecha con botones */
 .nav-right {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-/* Botón BI con imagen */
 .btn-bi {
     background: white;
     border: 1px solid #d0d0d0;
@@ -162,7 +156,6 @@ header {
 
 .bi-logo {
     height: 32px;
-    /* Aumentado de 20px a 32px */
     width: auto;
 }
 
@@ -172,7 +165,6 @@ header {
     font-weight: 600;
 }
 
-/* Selector de idioma */
 .language-selector {
     position: relative;
     cursor: pointer;
@@ -198,7 +190,6 @@ header {
     margin-left: 3px;
 }
 
-/* --- Carrusel (Hero) --- */
 .hero-slider {
     position: relative;
     height: 700px;
@@ -283,7 +274,6 @@ header {
     right: 30px;
 }
 
-/* Placeholder de imágenes */
 .bg-slide1 {
     background-image: url('../image/adulto-image.png');
 }
@@ -292,7 +282,6 @@ header {
     background-image: url('../image/jovenes-image.png');
 }
 
-/* --- Intro Texto con Sello --- */
 .intro-section {
     padding: 40px 20px 30px;
     text-align: center;
@@ -326,7 +315,6 @@ header {
     color: #555;
 }
 
-/* --- Carreras Simplificadas --- */
 .careers-section { 
     max-width: 1500px; 
     margin: 0 auto; padding: 60px 20px; 
@@ -343,23 +331,22 @@ header {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 100%;
 }
 
 .career-image-wrapper {
-    height: 240px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 35px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.career-image {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .career-info {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;              /* 👈 clave */
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
 }
 
@@ -368,6 +355,7 @@ header {
     line-height: 1.6;
     color: #555;
     margin-bottom: 25px;
+    padding: 0 15px;
     min-height: 100px;
 }
 
@@ -390,7 +378,6 @@ header {
     box-shadow: 0 4px 12px rgba(235, 114, 7, 0.3);
 }
 
-/* --- Video Section --- */
 .video-section {
     position: relative;
     height: 800px;
@@ -472,7 +459,6 @@ header {
     pointer-events: auto;
 }
 
-/* --- Estadísticas (Jóvenes Beneficiados) --- */
 .stats-section {
     background: linear-gradient(180deg, #0f1f3a, #152b4e);
     padding: 50px 20px;
@@ -527,7 +513,6 @@ header {
 .stat-card.blue   { background: #243a73; }
 .stat-card.orange { background: #f57c00; }
 
-/* --- Partners --- */
 .partners-section {
     padding: 45px 20px;
     background: #243b6b;
@@ -586,7 +571,6 @@ header {
     opacity: 1;
 }
 
-/* --- Cards --- */
 .alumni-section {
     background: #ededed;
     padding: 55px 70px 45px;
@@ -631,7 +615,7 @@ header {
 .alumni-card h2 {
     font-size: 30px;
     font-weight: 800;
-    color: #1e2f5f; /* azul principal */
+    color: #1e2f5f;
     line-height: 1.25;
     margin-bottom: 20px;
 }
@@ -653,7 +637,7 @@ header {
 }
 
 .alumni-card a span {
-    color: #f5a800; /* amarillo de acento */
+    color: #f5a800;
 }
 
 .alumni-block.reverse {
@@ -665,7 +649,6 @@ header {
     margin-right: -90px;
 }
 
-/* --- Blog --- */
 .blog-section {
     padding: 80px 20px;
     background: #16233F;
@@ -738,47 +721,1032 @@ header {
     overflow-wrap: break-word;
 }
 
-/* --- Footer --- */
+.redesign-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+    position: relative;
+}
+
+.redesign-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--color-blue) 0%, var(--color-orange) 50%, var(--color-blue) 100%);
+}
+
+.redesign-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.redesign-seal {
+    width: 140px;
+    height: auto;
+    margin: 0 auto 30px;
+    opacity: 0.95;
+}
+
+.redesign-title {
+    color: var(--color-blue);
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.redesign-intro {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    max-width: 1000px;
+    margin: 0 auto 60px;
+}
+
+.redesign-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.redesign-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.redesign-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--color-orange);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.redesign-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.redesign-card:hover::before {
+    transform: scaleX(1);
+}
+
+.redesign-number {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--color-blue);
+    opacity: 0.15;
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+.redesign-card h3 {
+    color: var(--color-blue);
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+}
+
+.redesign-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.redesign-conclusion {
+    background: var(--color-blue);
+    padding: 50px 60px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(35, 55, 109, 0.2);
+}
+
+.redesign-conclusion h3 {
+    color: var(--color-orange);
+    font-size: 28px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.redesign-conclusion p {
+    color: white;
+    font-size: 17px;
+    line-height: 1.9;
+    margin: 0;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Responsive para la sección de rediseño */
+@media (max-width: 1200px) {
+    .redesign-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .redesign-section {
+        padding: 50px 15px;
+    }
+
+    .redesign-title {
+        font-size: 28px;
+    }
+
+    .redesign-intro {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .redesign-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .redesign-card {
+        padding: 30px 20px;
+    }
+
+    .redesign-card h3 {
+        font-size: 16px;
+    }
+
+    .redesign-card p {
+        font-size: 13px;
+    }
+
+    .redesign-conclusion {
+        padding: 35px 25px;
+    }
+
+    .redesign-conclusion h3 {
+        font-size: 22px;
+    }
+
+    .redesign-conclusion p {
+        font-size: 15px;
+    }
+}
+
 footer {
     background: #16233F;
     color: white;
-    padding: 60px 20px 20px;
     font-size: 14px;
+}
+
+.footer-main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 50px 60px 30px;
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 40px;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 0;
+    position: relative;
+    padding-bottom: 50px;
+    margin-bottom: 40px;
+}
+
+.footer-grid::before,
+.footer-grid::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2.5px;
+    background: #ffffff;
+}
+
+.footer-grid::before {
+    left: calc(33.33% + 30px);
+}
+
+.footer-grid::after {
+    right: calc(33.33% + 30px);
 }
 
 .footer-col h4 {
     color: white;
-    margin-bottom: 20px;
-    border-bottom: 2px solid var(--color-orange);
-    display: inline-block;
-    padding-bottom: 5px;
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
 }
 
-.footer-col p,
 .footer-col a {
     color: #ccc;
     display: block;
-    margin-bottom: 10px;
-    line-height: 1.5;
+    margin-bottom: 8px;
+    font-size: 14px;
+    transition: color 0.3s;
 }
 
 .footer-col a:hover {
     color: var(--color-orange);
 }
 
+.footer-col p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.btn-image {
+    display: block;
+    max-width: 250px;
+    height: auto;
+    margin: 15px 0;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.btn-image:hover {
+    transform: translateY(-2px);
+}
+
+.footer-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 60px;
+}
+
+.footer-logo {
+    max-width: 220px;
+    height: auto;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+    padding-left: 40px;
+}
+
+.footer-second-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.empleos-section h4 {
+    color: white;
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.empleos-section a {
+    color: #ccc;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.empleos-section a:hover {
+    color: var(--color-orange);
+}
+
+.empleos-section p {
+    color: #ccc;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.empleos-section p a {
+    display: inline;
+}
+
+.footer-social-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-admisiones-img {
+    max-width: 280px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.btn-admisiones-img:hover {
+    transform: translateY(-2px);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+}
+
 .copyright {
     text-align: center;
-    margin-top: 20px;
-    color: #666;
-    font-size: 12px;
+    padding: 20px;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+}
+
+@media (max-width: 1200px) {
+    .top-bar {
+        padding: 15px 30px;
+    }
+
+    .nav-menu {
+        gap: 25px;
+    }
+
+    .hero-slider {
+        height: 600px;
+    }
+
+    .slide-content {
+        margin-right: 5%;
+    }
+
+    .careers-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .alumni-card {
+        padding: 45px 50px;
+        margin-left: -60px;
+    }
+
+    .alumni-block.reverse .alumni-card {
+        margin-right: -60px;
+    }
+
+    .partners-track img {
+        width: 140px;
+    }
+}
+
+/* Tablets (hasta 1024px) */
+@media (max-width: 1024px) {
+    header {
+        position: relative;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-item {
+        font-size: 11px;
+    }
+
+    .dropdown {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .hero-slider {
+        height: 500px;
+    }
+
+    .slide {
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    .slide-content {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .slide-text-img {
+        max-width: 400px;
+    }
+
+    .intro-section {
+        padding: 40px 20px;
+    }
+
+    .intro-section h2 {
+        font-size: 28px;
+    }
+
+    .intro-section img {
+        width: 30%;
+        height: auto;
+    }
+
+    .careers-section {
+        padding: 40px 20px;
+    }
+
+    .career-description {
+        min-height: 80px;
+    }
+
+    .video-section {
+        height: 600px;
+    }
+
+    .stats-section h2 {
+        font-size: 32px;
+    }
+
+    .stat-card {
+        min-height: 220px;
+        padding: 30px 20px;
+    }
+
+    .stat-number {
+        font-size: 60px;
+    }
+
+    .alumni-section {
+        padding: 40px 30px;
+    }
+
+    .alumni-block {
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    .alumni-image,
+    .alumni-card {
+        width: 100%;
+        margin: 0 !important;
+    }
+
+    .alumni-card {
+        margin-top: -50px !important;
+        padding: 40px;
+    }
+
+    .alumni-block.reverse {
+        flex-direction: column;
+    }
+
+    .blog-title {
+        font-size: 36px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-grid::before,
+    .footer-grid::after {
+        display: none;
+    }
+
+    .footer-center {
+        padding: 20px 0;
+    }
+
+    .footer-right {
+        text-align: center;
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .footer-second-section {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .btn-image {
+        margin: 15px auto;
+    }
+}
+
+/* Móviles grandes (hasta 768px) */
+@media (max-width: 768px) {
+    .logo-kinal {
+        height: 45px;
+    }
+
+    .nav-menu {
+        font-size: 10px;
+        gap: 10px;
+    }
+
+    .nav-right {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .bi-logo {
+        height: 25px;
+    }
+
+    .language-selector {
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+
+    .hero-slider {
+        height: 400px;
+    }
+
+    .slide-text-img {
+        max-width: 320px;
+    }
+
+    .slider-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .prev {
+        left: 15px;
+    }
+
+    .next {
+        right: 15px;
+    }
+
+    .intro-section h2 {
+        font-size: 24px;
+    }
+
+    .intro-section p {
+        font-size: 14px;
+    }
+
+    .intro-section img {
+        width: 40%;
+    }
+
+    .careers-section {
+        padding: 30px 15px;
+    }
+
+    .careers-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .career-description {
+        font-size: 14px;
+        min-height: auto;
+    }
+
+    .btn-conoce-mas {
+        padding: 10px 25px;
+        font-size: 12px;
+    }
+
+    .video-section {
+        height: 400px;
+    }
+
+    .control-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    #volumeControl {
+        width: 80px;
+    }
+
+    .stats-section {
+        padding: 40px 15px;
+    }
+
+    .stats-section h2 {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .stat-card {
+        min-height: 180px;
+        padding: 25px 15px;
+    }
+
+    .stat-number {
+        font-size: 48px;
+    }
+
+    .stat-label {
+        font-size: 14px;
+    }
+
+    .partners-section {
+        padding: 30px 15px;
+    }
+
+    .partners-carousel {
+        grid-template-columns: 30px 1fr 30px;
+    }
+
+    .partners-track {
+        gap: 30px;
+    }
+
+    .partners-track img {
+        width: 100px;
+    }
+
+    .partner-arrow {
+        font-size: 24px;
+    }
+
+    .alumni-section {
+        padding: 30px 15px;
+    }
+
+    .alumni-card {
+        padding: 30px 20px;
+        margin-top: -30px !important;
+    }
+
+    .alumni-card h2 {
+        font-size: 22px;
+    }
+
+    .alumni-card p {
+        font-size: 15px;
+    }
+
+    .blog-section {
+        padding: 50px 15px;
+    }
+
+    .blog-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .blog-card {
+        height: 280px;
+    }
+
+    .blog-card-title {
+        font-size: 18px;
+        margin: 20px;
+    }
+
+    .footer-main {
+        padding: 40px 20px 20px;
+    }
+
+    .footer-col h4 {
+        font-size: 14px;
+    }
+
+    .footer-col a,
+    .footer-col p {
+        font-size: 13px;
+    }
+
+    .footer-logo {
+        max-width: 160px;
+    }
+
+    .btn-image {
+        max-width: 200px;
+    }
+
+    .btn-admisiones-img {
+        max-width: 220px;
+    }
+
+    .social-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .copyright {
+        font-size: 10px;
+        padding: 15px;
+    }
+}
+
+/* Móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    .top-bar {
+        padding: 15px;
+    }
+
+    .logo-kinal {
+        height: 40px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .nav-item {
+        font-size: 10px;
+    }
+
+    .dropdown {
+        min-width: 150px;
+    }
+
+    .dropdown li a {
+        padding: 10px 12px;
+        font-size: 11px;
+    }
+
+    .bi-logo {
+        height: 22px;
+    }
+
+    .language-selector {
+        padding: 5px 8px;
+        font-size: 10px;
+    }
+
+    .hero-slider {
+        height: 350px;
+    }
+
+    .slide-text-img {
+        max-width: 280px;
+    }
+
+    .slider-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .intro-section img {
+        width: 50%;
+    }
+
+    .intro-section h2 {
+        font-size: 20px;
+    }
+
+    .intro-section p {
+        font-size: 13px;
+    }
+
+    .career-image-wrapper {
+        height: 200px;
+    }
+
+    .career-description {
+        font-size: 13px;
+    }
+
+    .video-section {
+        height: 300px;
+    }
+
+    .stats-section h2 {
+        font-size: 22px;
+    }
+
+    .stat-number {
+        font-size: 40px;
+    }
+
+    .stat-label {
+        font-size: 12px;
+    }
+
+    .partners-carousel {
+        grid-template-columns: 25px 1fr 25px;
+    }
+
+    .partners-track img {
+        width: 80px;
+    }
+
+    .partner-arrow {
+        font-size: 20px;
+    }
+
+    .alumni-card {
+        padding: 25px 15px;
+    }
+
+    .alumni-card h2 {
+        font-size: 18px;
+    }
+
+    .alumni-card p {
+        font-size: 13px;
+    }
+
+    .blog-title {
+        font-size: 24px;
+    }
+
+    .blog-card {
+        height: 250px;
+    }
+
+    .blog-card-title {
+        font-size: 16px;
+        margin: 15px;
+    }
+
+    .footer-col h4 {
+        font-size: 13px;
+    }
+
+    .footer-col a,
+    .footer-col p {
+        font-size: 12px;
+    }
+
+    .footer-logo {
+        max-width: 140px;
+    }
+
+    .btn-image,
+    .btn-admisiones-img {
+        max-width: 180px;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .copyright {
+        font-size: 9px;
+    }
+}
+
+/* Móviles muy pequeños (hasta 360px) */
+@media (max-width: 360px) {
+    .logo-kinal {
+        height: 35px;
+    }
+
+    .nav-item {
+        font-size: 9px;
+    }
+
+    .hero-slider {
+        height: 300px;
+    }
+
+    .slide-text-img {
+        max-width: 240px;
+    }
+
+    .intro-section h2 {
+        font-size: 18px;
+    }
+
+    .stats-section h2 {
+        font-size: 20px;
+    }
+
+    .stat-number {
+        font-size: 36px;
+    }
+
+    .blog-title {
+        font-size: 20px;
+    }
+
+    .alumni-card h2 {
+        font-size: 16px;
+    }
+}
+
+/* Landscape en móviles */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-slider {
+        height: 100vh;
+    }
+
+    .video-section {
+        height: 100vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .redesign-seal {
+        width: 100px;
+    }
+
+    .redesign-title {
+        font-size: 22px;
+    }
+
+    .redesign-intro {
+        font-size: 14px;
+    }
+
+    .redesign-number {
+        font-size: 36px;
+    }
+
+    .redesign-card h3 {
+        font-size: 15px;
+    }
+
+    .redesign-conclusion h3 {
+        font-size: 20px;
+    }
+
+    .redesign-conclusion p {
+        font-size: 14px;
+    }
 }
